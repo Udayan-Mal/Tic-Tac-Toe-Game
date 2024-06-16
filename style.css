@@ -1,0 +1,233 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    background: linear-gradient(to right, #0f0f25, #0f0f25);
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    /* background: #1e1e1e; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+/* --------------------------- */
+#controls button, #toggleSoloMode {
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 50px;
+}
+
+.board {
+    display: grid;
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.board[data-size="3"] {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.board[data-size="4"] {
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(4, 75px);
+}
+
+.board[data-size="5"] {
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+}
+
+/* .board[data-size="7"] {
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(7, 60px);
+}
+
+.board[data-size="9"] {
+    grid-template-columns: repeat(9, 60px);
+    grid-template-rows: repeat(9, 60px);
+} */
+
+.cell {
+    background: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 10px;
+    
+}
+
+.cell:hover {
+    background: #eee;
+    transform: scale(1.05);
+}
+
+.cell span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#reset, #resetScores {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #ff758c;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#reset:hover, #resetScores:hover {
+    background: #8a1730;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#sizeSelector {
+    margin-bottom: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .board[data-size="3"] {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .board[data-size="4"] {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(4, 60px);
+    }
+
+    .board[data-size="5"] {
+        grid-template-columns: repeat(5, 50px);
+        grid-template-rows: repeat(5, 50px);
+    }
+
+    .cell {
+        font-size: 1.5rem;
+    }
+}
+
+#leaderboard {
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+}
+
+#leaderboard h2 {
+    margin-bottom: 10px;
+}
+
+#leader {
+    font-weight: bold;
+}
+
+#changeNames {
+    margin-top: 20px;
+}
+
+#changeNames input {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#updateNames {
+    padding: 5px 10px;
+    background: #6200ea;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#updateNames:hover {
+    background: #5f1166;
+    
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#toggleSoloMode:hover {
+    background: #5f1166;
+    
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+

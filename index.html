@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="tic-tac-toe1.png" alt="Game Logo">
+            <h1>Tic Tac Toe</h1>
+        </header>
+
+        <div id="status">X's Turn</div>
+        
+        <div id="sizeSelector">
+            <label for="boardSize">Board Size:</label>
+            <select id="boardSize">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <!-- <option value="7">7x7</option>
+                <option value="9">9x9</option> -->
+            </select>
+        </div>
+
+        <div class="board" data-size="3"></div>
+        
+        <div id="controls">
+            <button id="reset">Reset Game</button>
+            <button id="resetScores">Reset Scores</button>
+        </div>
+
+        <div id="scores">
+            <p>Player X: <span id="playerXScore">0</span></p>
+            <p>Player O: <span id="playerOScore">0</span></p>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to reset the current game?</p>
+                <button id="confirmReset">Yes</button>
+                <button id="cancelReset">No</button>
+            </div>
+        </div>
+
+        <div id="leaderboard">
+            <h2>Leaderboard</h2>
+            <p id="leader">Current Leader: <span id="leaderName"></span></p>
+        </div>
+
+        <div id="changeNames">
+            <input id="playerXNameInput" type="text" placeholder="Player X Name">
+            <input id="playerONameInput" type="text" placeholder="Player O Name">
+            <button id="updateNames">Update Names</button>
+        </div>
+        
+        
+        <button id="toggleSoloMode">Toggle Solo Mode</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
