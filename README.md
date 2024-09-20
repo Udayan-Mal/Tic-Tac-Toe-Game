@@ -8,4 +8,4 @@ Reset Button: Restart the game with a modal confirmation.
 Leaderboard: Track wins, highlighted leading player, and reset scores.
 Local Storage: Persist scores across sessions.
 Customizable Names: Change player names from default.
-website : https://coderudayan.github.io/Tic-Tac-Toe-Game/
+website : https://udayan-mal.github.io/Tic-Tac-Toe-Game/
